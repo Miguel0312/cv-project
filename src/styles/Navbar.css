@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+  width: 100vw;
+  background-color: #333;
+  color: white;
+  padding: 20px 30px;
+}
