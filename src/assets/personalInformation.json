@@ -1,5 +1,6 @@
 {
   "title": "Personal Information",
+  "dynamic": false,
   "informations": [
     {
       "type": "text",

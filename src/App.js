@@ -16,8 +16,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
-        <Form sections={this.sections}></Form>
+        <Navbar/>
+        <Form sections={this.sections}/>
       </div>
     );
   }

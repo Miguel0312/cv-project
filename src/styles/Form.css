@@ -1,11 +1,12 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 45vw;
+  width: 40vw;
   background-color: #eee;
   margin-left: 8vw;
   margin-top: 130px;
   padding: 20px 10px;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -31,4 +32,20 @@ input:focus {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+}
+
+button {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 3px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 15px;
+  color: white;
+  background-color: #111;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: black;
 }
