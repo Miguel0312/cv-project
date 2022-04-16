@@ -1,0 +1,29 @@
+{
+  "title": "Education",
+  "informations": [
+    {
+      "type": "text",
+      "name": "University name"
+    },
+    {
+      "type": "text",
+      "name": "City"
+    },
+    {
+      "type": "text",
+      "name": "Degree"
+    },
+    {
+      "type": "text",
+      "name": "Subject"
+    },
+    {
+      "type": "text",
+      "name": "From"
+    },
+    {
+      "type": "text",
+      "name": "To"
+    }
+  ]
+}

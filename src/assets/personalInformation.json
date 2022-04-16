@@ -1,0 +1,29 @@
+{
+  "title": "Personal Information",
+  "informations": [
+    {
+      "type": "text",
+      "name": "First Name"
+    },
+    {
+      "type": "text",
+      "name": "Last Name"
+    },
+    {
+      "type": "text",
+      "name": "Title"
+    },
+    {
+      "type": "text",
+      "name": "Address"
+    },
+    {
+      "type": "tel",
+      "name": "Phone Number"
+    },
+    {
+      "type": "email",
+      "name": "Email"
+    }
+  ]
+}

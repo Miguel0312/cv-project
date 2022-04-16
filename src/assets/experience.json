@@ -1,0 +1,25 @@
+{
+  "title": "Experience",
+  "informations": [
+    {
+      "type": "text",
+      "name": "Position"
+    },
+    {
+      "type": "text",
+      "name": "Company"
+    },
+    {
+      "type": "text",
+      "name": "City"
+    },
+    {
+      "type": "text",
+      "name": "From"
+    },
+    {
+      "type": "text",
+      "name": "To"
+    }
+  ]
+}
