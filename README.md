@@ -7,7 +7,7 @@ They can add a brief description about themselves, as well as multiple professio
 \
 Built using React.js and [react-to-print](https://www.npmjs.com/package/react-to-print).
 ## Getting Started
-To use it simply use:
+Run on the terminal:
 ```
 git clone https://github.com/Miguel0312/cv-project
 cd cv-project
