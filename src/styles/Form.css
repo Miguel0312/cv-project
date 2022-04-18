@@ -4,7 +4,6 @@ form {
   width: 40vw;
   background-color: #eee;
   margin-left: 8vw;
-  margin-top: 130px;
   padding: 20px 10px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -42,10 +41,10 @@ button {
   border: none;
   margin-top: 15px;
   color: white;
-  background-color: #111;
+  background-color: #222;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: black;
 }

@@ -18,6 +18,7 @@ class Informations extends Component {
     this.setState({
       data: tempData,
     });
+    this.props.updateSection(e.target.value, index);
   }
 
   render() {

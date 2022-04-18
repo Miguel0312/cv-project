@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+#CV {
+  width: 40vw;
+  height: 297mm;
+  width: 210mm;
+  position: sticky;
+  background-color:#eee;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 150px min-content min-content 1fr;
+  grid-template-areas:
+    "title title"
+    "experience contact"
+    "education contact"
+    ". contact";
+}
+
+#Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #143e72;
+  grid-area: title;
+  color: white;
+  padding-left: 20px;
+}
+
+#name {
+  font-size: 52px;
+  font-weight: 600;
+}
+
+#position {
+  font-size: 24px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  grid-area: contact;
+  padding: 20px 10px;
+}
+
+#contact h2 {
+  color: #143e72;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+}
+
+#experiences {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+#experiences h2 {
+  color: #143e72;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+}
+
+.exp {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-areas: "date position" ". company";
+  height: 60px;
+}
+
+.date {
+  grid-area: date;
+  font-weight: 800;
+}
+
+.position {
+  grid-area: position;
+  font-weight: 800;
+}
+
+.company {
+  grid-area: company;
+}
+
+#education {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+#education h2 {
+  color: #143e72;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+}
+
+.edu {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "date university" ". degree" ". subject";
+  grid-row-gap: 5px;
+  height: 60px;
+}
+
+.university {
+  grid-area: university;
+  font-weight: 800;
+}
+
+.degree {
+  grid-area: degree;
+}
+
+.subject {
+  grid-area: subject;
+}
