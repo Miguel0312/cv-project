@@ -13,7 +13,7 @@ class Form extends Component {
       const content = new Array(this.props.sections[i].informations.length).fill("");
       data.push([{ id, content }]);
     }
-    this.state = { data };
+    this.state = { data};
   }
 
   updateFormData(sectionIndex, content) {
@@ -36,12 +36,28 @@ class Form extends Component {
     );
   }
 
+  updateFormImg(imgURL) {
+    this.props.updateAppImg(imgURL)
+  }
+
+  updateFormDescription(text){
+    this.props.updateAppDescription(text);
+  }
+
   render() {
     const { sections } = this.props;
     return (
       <form>
         {sections.map((section, index) => {
-          return <Section key={index} section={section} updateForm={this.updateFormData.bind(this, index)}></Section>;
+          return (
+            <Section
+              key={index}
+              section={section}
+              updateForm={this.updateFormData.bind(this, index)}
+              updateFormImg={this.updateFormImg.bind(this)}
+              updateFormDescription={this.updateFormDescription.bind(this)}
+            ></Section>
+          );
         })}
         <ReactToPrint trigger={this.printButton} content={() => this.props.cvRef.current}></ReactToPrint>
       </form>

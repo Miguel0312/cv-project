@@ -23,8 +23,36 @@ h2 {
   font-size: 20px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+#photo {
+  display: none;
+}
+
+label {
+  display: block;
+  width: 100%;
+  background-color: white;
+  margin: 15px 0;
+  font-size: 18px;
+  padding: 5px 3px;
+  border-radius: 8px;
+}
+
+label:hover {
+  cursor: pointer;
 }
 
 .section {

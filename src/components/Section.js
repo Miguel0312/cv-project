@@ -66,6 +66,38 @@ class Section extends Component {
     return;
   }
 
+  updateImg(e) {
+    if (e.target.files.length !== 0) {
+      const file = e.target.files[0];
+      this.props.updateFormImg(URL.createObjectURL(file));
+      return;
+    }
+    this.props.updateFormImg("");
+  }
+
+  updateDescription(e) {
+    this.props.updateFormDescription(e.target.value);
+  }
+
+  createAdditionalInformation(dynamic) {
+    if (!dynamic)
+      return (
+        <div>
+          <label>
+            Photo
+            <input
+              type="file"
+              id="photo"
+              accept="image/png, image/jpg, image/jpeg"
+              onChange={this.updateImg.bind(this)}
+            ></input>
+          </label>
+          <textarea rows="5" placeholder="Description" onChange={this.updateDescription.bind(this)}></textarea>
+        </div>
+      );
+    return;
+  }
+
   render() {
     const { title, dynamic, informations } = this.props.section;
     return (
@@ -80,6 +112,7 @@ class Section extends Component {
                 updateSection={this.updateSectionData.bind(this, d.id)}
               ></Informations>
               {this.createDeleteButton(dynamic, d.id)}
+              {this.createAdditionalInformation(dynamic)}
             </div>
           );
         })}

@@ -17,7 +17,7 @@ class App extends Component {
       data.push([{ content: new Array(this.sections[i].informations.length).fill("") }]);
     }
 
-    this.state = { data };
+    this.state = { data, imgURL: "", description: "" };
     this.cvRef = React.createRef();
   }
 
@@ -25,13 +25,28 @@ class App extends Component {
     this.setState({ data });
   }
 
+  updateAppImg(imgURL) {
+    this.setState({ imgURL });
+  }
+
+  updateAppDescription(text) {
+    this.setState({ description: text });
+  }
+
   render() {
+    console.log(this.state.description);
     return (
       <div>
         <Navbar />
         <div id="content">
-          <Form sections={this.sections} updateApp={this.updateAppData.bind(this)} cvRef={this.cvRef} />
-          <CV data={this.state.data} ref={this.cvRef} />
+          <Form
+            sections={this.sections}
+            updateApp={this.updateAppData.bind(this)}
+            cvRef={this.cvRef}
+            updateAppImg={this.updateAppImg.bind(this)}
+            updateAppDescription={this.updateAppDescription.bind(this)}
+          />
+          <CV data={this.state.data} ref={this.cvRef} imgURL={this.state.imgURL} description={this.state.description} />
         </div>
       </div>
     );

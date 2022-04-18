@@ -60,6 +60,34 @@
   border-bottom: 1px solid rgba(150, 150, 150, 0.5);
 }
 
+#imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#contact img {
+  width: 80%;
+  height: auto;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+#description {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+#description h2 {
+  color: #143e72;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+  margin-bottom: 10px;
+}
+
+#description p {
+  color: rgb(51, 51, 51);
+}
+
 #experiences {
   margin-top: 30px;
   padding: 0 15px;
