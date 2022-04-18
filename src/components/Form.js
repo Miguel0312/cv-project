@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactToPrint from "react-to-print";
 import Section from "./Section";
 import uniqid from "uniqid";
 import "../styles/Form.css";
@@ -22,6 +23,19 @@ class Form extends Component {
     this.props.updateApp(this.state.data);
   }
 
+  printButton() {
+    return (
+      <button
+        id="printButton"
+        onClick={(e) => {
+          e.preventDefault();
+        }}
+      >
+        Generate PDF
+      </button>
+    );
+  }
+
   render() {
     const { sections } = this.props;
     return (
@@ -29,6 +43,7 @@ class Form extends Component {
         {sections.map((section, index) => {
           return <Section key={index} section={section} updateForm={this.updateFormData.bind(this, index)}></Section>;
         })}
+        <ReactToPrint trigger={this.printButton} content={() => this.props.cvRef.current}></ReactToPrint>
       </form>
     );
   }

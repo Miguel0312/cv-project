@@ -4,12 +4,19 @@
   font-family: "Nunito", sans-serif;
 }
 
+@media print {
+  body {
+    margin: 0 !important;
+    padding: 0;
+  }
+}
+
 #CV {
   width: 40vw;
   height: 297mm;
   width: 210mm;
   position: sticky;
-  background-color:#eee;
+  background-color: #eee;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: grid;
   grid-template-columns: 60% 40%;
@@ -69,7 +76,6 @@
   grid-template-columns: 30% 70%;
   grid-template-rows: repeat(2, 50%);
   grid-template-areas: "date position" ". company";
-  height: 60px;
 }
 
 .date {
@@ -103,7 +109,6 @@
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "date university" ". degree" ". subject";
   grid-row-gap: 5px;
-  height: 60px;
 }
 
 .university {

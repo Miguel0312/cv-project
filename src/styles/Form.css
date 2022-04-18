@@ -48,3 +48,12 @@ button:hover {
   cursor: pointer;
   background-color: black;
 }
+
+#printButton {
+  background-color: rgb(9, 170, 9);
+}
+
+#printButton:hover {
+  cursor: pointer;
+  background-color: rgb(9, 150, 9);
+}

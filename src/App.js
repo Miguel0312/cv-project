@@ -18,6 +18,7 @@ class App extends Component {
     }
 
     this.state = { data };
+    this.cvRef = React.createRef();
   }
 
   updateAppData(data) {
@@ -29,8 +30,8 @@ class App extends Component {
       <div>
         <Navbar />
         <div id="content">
-          <Form sections={this.sections} updateApp={this.updateAppData.bind(this)} />
-          <CV data={this.state.data} />
+          <Form sections={this.sections} updateApp={this.updateAppData.bind(this)} cvRef={this.cvRef} />
+          <CV data={this.state.data} ref={this.cvRef} />
         </div>
       </div>
     );
